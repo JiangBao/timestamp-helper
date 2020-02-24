@@ -1,0 +1,14 @@
+.footer {
+  color: #a50d0d;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #00264d;
+  font-weight: bold;
+  text-decoration: none;
+}

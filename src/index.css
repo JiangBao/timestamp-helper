@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0099CC;
+  font-family: sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

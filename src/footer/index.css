@@ -1,6 +1,7 @@
 .footer {
   color: #a50d0d;
-  margin-top: 20px;
+  margin-top: 100px;
+  font-size: 0.8em;
 }
 
 .footer p {
@@ -11,4 +12,8 @@
   color: #00264d;
   font-weight: bold;
   text-decoration: none;
+}
+
+.footer p:nth-child(2):hover {
+  transform: scale(1.2);
 }

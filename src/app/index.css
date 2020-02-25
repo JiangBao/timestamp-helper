@@ -2,3 +2,7 @@
   color: white;
   text-align: center;
 }
+
+.app .title {
+  font-size: 3em;
+}

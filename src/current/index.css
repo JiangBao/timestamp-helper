@@ -1,0 +1,58 @@
+.current {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  padding-left: 30px;
+}
+
+.current .time {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 8px 10px;
+  font-size: 18px;
+  border: 1px solid #336666;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px 1px #555;
+}
+
+.current .time span {
+  display: inline-block;
+  width: 200px;
+}
+
+.current .start-button {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+
+.current .start-button img {
+  max-width: 100%;
+}
+
+.current .start-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+select{
+  background: rgba(0,0,0,0);
+  width: 80px;
+  height: 30px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px #1a1a1a solid;
+  border-radius: 5px;
+}
+option{
+  color: #00264d;
+  background: #A6E1EC;
+  line-height: 20px;
+}
+select:focus{
+  border: 2px #336666 solid;
+  outline: none;
+}
+option:hover{
+  background: #EBCCD1;
+}

@@ -1,0 +1,58 @@
+.converter {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.converter textarea {
+  margin: 0 30px;
+  padding: 10px;
+  background: rgba(0,0,0,0);
+  width: 160px;
+  height: 160px;
+  border: 4px solid #336666;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  resize: none;
+  text-align: center;
+}
+
+.converter textarea:focus {
+  outline: none;
+}
+
+.converter .opt-btn-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.converter .opt-btn-area .opt-btn {
+  width: 100%;
+  height: 50%;
+  padding: 10px 0;
+}
+
+.converter .opt-btn-area .opt-btn:nth-child(1) {
+  display: flex;
+  align-items: flex-end;
+}
+
+.converter .opt-btn-area .opt-btn button {
+  margin: 0;
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  color: #00264d;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0);
+  box-shadow: 0 0 6px 1px #333;
+  border-radius: 5px;
+}
+
+.converter .opt-btn-area .opt-btn button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 1px #333;
+}

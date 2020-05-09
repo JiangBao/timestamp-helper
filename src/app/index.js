@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flag: 's'
+      flag: 'ms'
     };
     this.handleFlagChange = this.handleFlagChange.bind(this);
   }

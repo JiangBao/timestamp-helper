@@ -11,3 +11,37 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 700px) {
+  #root {
+    height: auto;
+  }
+  .current {
+    flex-direction: column;
+    padding: 0;
+  }
+  .current .time {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .current .start-button {
+    position: relative;
+    top: -94px;
+    left: 50px;
+  }
+  .current select {
+    position: relative;
+    left: -20px;
+  }
+  .converter {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+  .converter .opt-btn-area {
+    flex-direction: row;
+  }
+  .converter .opt-btn-area .opt-btn {
+    margin: 0 20px;
+  }
+}

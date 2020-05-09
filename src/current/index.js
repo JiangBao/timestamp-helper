@@ -9,7 +9,8 @@ class Current extends Component {
     super(props)
     this.state = {
       status: 'open',
-      timestamp: moment().unix(Date.now()),
+      // timestamp: moment().unix(Date.now()),
+      timestamp: Date.now(),
       time: moment().format('YYYY-MM-DD HH:mm:ss'),
     };
     this.tick = this.tick.bind(this);
@@ -44,7 +45,6 @@ class Current extends Component {
   handleSelectChange(event) {
     this.props.handleFlagChange(event.target.value);
     let timestamp = new Date(this.state.time).getTime();
-    console.log(timestamp)
     if (event.target.value === 's') {
       timestamp = moment(this.state.time).unix();
     }

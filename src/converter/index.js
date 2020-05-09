@@ -10,32 +10,40 @@ class Converter extends Component {
       input: '',
       output: '',
     };
-    this.onCopy = this.onCopy.bind(this);
-    this.onConverter = this.onConverter.bind(this);
-    this.initTextarea = this.initTextarea.bind(this);
-    this.handleTextareaFocus = this.handleTextareaFocus.bind(this);
-    this.handleTextareaChange = this.handleTextareaChange.bind(this);
+    // this.onCopy = this.onCopy.bind(this);
+    // this.onConverter = this.onConverter.bind(this);
+    // this.initTextarea = this.initTextarea.bind(this);
+    // this.handleTextareaFocus = this.handleTextareaFocus.bind(this);
+    // this.handleTextareaChange = this.handleTextareaChange.bind(this);
+    // this.handleTextareaBlur = this.handleTextareaBlur.bind(this);
   }
   componentDidMount() {
     this.initTextarea();
   }
-  handleTextareaChange(event) {
+  handleTextareaChange = (event) => {
     this.setState({input: event.target.value});
   }
-  handleTextareaFocus() {
-    this.setState({input: '', output: ''});
+  handleTextareaFocus = () => {
+    if (/输入时间或者时间戳/.test(this.state.input)) {
+      this.setState({input: '', output: ''});
+    }
   }
-  initTextarea() {
+  handleTextareaBlur = () => {
+    if (!this.state.input.length) {
+      this.initTextarea();
+    }
+  }
+  initTextarea = () => {
     this.setState({
       input: `\n\n输入时间或者时间戳\n\n2020-01-01 00:00:00\nor\n1582546814`
     });
   }
   // 复制结果成功提示
-  onCopy() {
+  onCopy = () => {
     alert('复制成功');
   }
   // 时间转换功能
-  onConverter() {
+  onConverter = () => {
     const flag = this.props.flag;
     const input = this.state.input;
     let output;
@@ -61,7 +69,7 @@ class Converter extends Component {
   render() {
     return (
       <div className="converter">
-        <textarea value={this.state.input} onChange={this.handleTextareaChange} onFocus={this.handleTextareaFocus} />
+        <textarea value={this.state.input} onChange={this.handleTextareaChange} onFocus={this.handleTextareaFocus} onBlur={this.handleTextareaBlur} />
         <div className="opt-btn-area">
           <div className="opt-btn opt-btn-converter">
             <button onClick={this.onConverter}>转换</button>

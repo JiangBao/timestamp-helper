@@ -5,6 +5,11 @@ body {
   font-family: sans-serif;
 }
 
+.attachment {
+  position: absolute;
+  right: 0;
+}
+
 #root {
   height: 100vh;
   display: flex;
@@ -15,6 +20,9 @@ body {
 @media screen and (max-width: 700px) {
   #root {
     height: auto;
+  }
+  .attachment {
+    display: none;
   }
   .current {
     flex-direction: column;
